@@ -1,352 +1,320 @@
-<html>
-<head>
-<link rel="icon" href="">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="Keywords" content="Abhishek,Abhishek mani,mani,portfolio,website,my website,resume,web designer,web developer,developer,ui designer,ux designer,ui/ux,frontend,new delhi,abhishek mani website">
-<meta name="Description" content="Fresher frontend designer as well as backend PHP developer dedicated to develop elegant user interfaces. |PORTFOLIO|">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="portfolio.css">
-<script type="text/javascript" src="jquery-3.2.1.min.js"></script> 
-
-<title>
-Abhishek Mani
-</title>
-
-</head>
-<body id="main">
-<script>
-var flag=0;
-function openNav() 
+.container-fluid
 {
-if(flag==0)
-{
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-	$('i').removeClass('fa-bars');
-	$('i').addClass('fa-times');
-	flag=1;
+padding:0;
+margin:auto;
 }
-else if(flag==1)
-{
-	$('i').removeClass('fa-times');
-	$('i').addClass('fa-bars');
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";	
-	flag=0;
-}
+.carousel-content {
+    color:black;
+    display:flex;
+    align-items:center;
 }
 
-$(document).on('mouseover', 'video', function() { 
-            $(this).get(0).play(); 
-        }); 
-
-        //pause video on mouse leave
-        $(document).on('mouseleave', 'video', function() { 
-            $(this).get(0).pause(); 
-        });
+#text-carousel {
+ }
+ .carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+@media screen and (max-width: 768px) 
+{
+	.pa
+	{
+		font-size:40px !important;
+	}
+	.intro
+	{
+		margin-top:1px !important;
+	}
+	.smGlobalBtn 
+	{
+		padding-left:0px !important;
+		width:35px !important;
+		height:35px !important;
+		font-size:15px !important;
+		line-height:2em !important;
+	}
 	
+	#hero       
+	{
+	background-image: url('me1.png');
+	width:100%;
+    height: 100%; 
 
-</script>
-<script>
-$(document).ready(function(){
-	
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 1000)
-		{
-			typeWriter();
-			}
-			});
-			});
-var i = 0;
-var txt = 'Let\'s Build something !'; /* The text */
-var speed = 300; /* The speed/duration of the effect in milliseconds */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+	}
+}
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
 
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}		
-</script>
-<script>
-$(document).ready(function(){
-	
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 1070)
-		{
-		$('.html').removeClass("zero",5000,"easeInBack" );
-		$('.css').removeClass("zero",5000,"easeInBack" );
-		$('.bootstrap').removeClass("zero",5000,"easeInBack" );
-		$('.js').removeClass("zero", 5000,"easeInBack" );
-		$('.jquery').removeClass("zero",5000,"easeInBack" );
-		$('.php').removeClass("zero",5000,"easeInBack" );
-		$('.mysql').removeClass("zero",5000,"easeInBack" );
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+<!--------------------------------Smaller screen---------------------------------------->
+@media screen and (max-height: 450px) 
+{
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+	 
+}
+<!----------------------------------end----------------------------------------------------------->
+.sample
+{
+		transition:transform 0.3s ease-in-out;
+		box-shadow:1.2px 1.1px 1.3px 1.6px powderblue;
 		}
-		});
-		});
-		</script>
-<script>
-$(document).ready(function()
+.sample:hover
 {
-$('.html').addClass("zero");
-$('.css').addClass("zero");
-$('.bootstrap').addClass("zero");
-$('.js').addClass("zero");
-$('.jquery').addClass("zero");
-$('.php').addClass("zero");
-$('.mysql').addClass("zero");
-
-});
-</script>
-<script>
-
-$(document).ready(function()
+    transform: translate(10px,-22px); /* Standard syntax */
+}
+.footer
 {
-var flag=1;
-window.sr = ScrollReveal({ reset: true });
-sr.reveal('.video', { duration: 500 });
-sr.reveal('#contact', { duration: 500 });
-sr.reveal('#about', { duration: 500 });
-sr.reveal('.like', { duration: 500 });
-sr.reveal('#myskill', { duration: 500 });
-$(window).scroll(function(){
-    $("#hero").css("opacity", 1 - $(window).scrollTop() / 500);
-  });
-});
-function drop()
+	background-image: url('tex.jpg');
+    height: 65%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#hero
 {
-	if(flag==1)
-	{
-	$('#b').animate({'margin-top':'0'},500);
-	$('#b').addClass("anim");
-	$('.con').show(500);
-	flag=0;
-	}
-	else
-	{
-		$('#b').removeClass("anim");
-		$('#b').animate({'margin-top':'124px'},500);
-		$('.con').hide(500);
-	    flag=1;
-	}
-	}
-</script>
-<script type="text/javascript">
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
-    $('.in_hide').show();
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 700);
-});
-$(document).on('click', 'a[href^="#text-carousel"]', function (event) {
-    event.Default();
-    
-});
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+	background-image: url('mecover.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+overflow:hidden;    
+}
+.fa{font-size:20px;cursor:pointer;}
+video:hover
+{
+	transform:scale(1.2,1.2);
+    box-shadow:1px 1.2px 1.3px 1.8px black;
+}
 
-<span style="z-index:1100;position:fixed;top:35;left:55;background-color:black;">
-<i class="fa fa-bars" style="z-index:1000;color:white" aria-hidden="true"  onclick="openNav()"></i>
-</span>
-<div id="mySidenav" class="sidenav text-center" style="font-family:cursive">
-<a href="#hero">Introduction</a>
- <a href="#about">About</a> 
- <a href="#portfolio">Portfolio</a>
- <a href="#myskill">Skills</a>
- <a href="#contact">Contact</a>
-  <a href="#social">Reach me</a>
-</div>
-<div id="hero" class="container-fluid" style="width:100%;padding:0">
-<div id="hero-text"class="col-md-6" style="margin-top:195px">
-<div class="intro" style="">
-<span style="font-size:65;font-family:Lucida sans;margin:auto"><center>Abhishek Mani</center></span><br>
+.smGlobalBtn { /* global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    border:2px solid #ddd; /* add border to the buttons */
+    box-shadow: 0 3px 3px #999;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 100%;
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+}
 
-<div id="text-carousel" class="carousel slide text-center" data-ride="carousel">
-    <!-- Wrapper for slides -->
-    <div class="row">
-        <div class="col-xs-offset-2 col-xs-7 ">
-            <div class="carousel-inner text-center" style="text-align:center;">
-                <div class="item active">
-                    <div class="carousel-content">
-                        <div>
-                            <p style="text-align:center"><center><span style="font-size:35;font-family:Garamond;color:grey">UI/UX Designer,Backend Developer</span></center></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="carousel-content">
-                        <div>
-                            <p><span style="font-size:35;font-family:Garamond;color:grey">I am a Freelancer UI/UX Designer from India living in New Delhi.</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="carousel-content">
-                        <div>                          
-                            <p><span style="font-size:35;font-family:Garamond;color:grey">A user-centered mindset and sensitivity for design turned out to be the perfect fit when collaborating with clients.</span></p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <!-- Controls --> <a class="left carousel-control" href=".carousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
- <a class="right carousel-control" href=".carousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
+/* facebook button class*/
+.facebookBtn{
+    background: #4060A5;
+}
 
-</div>
-</div>
-<div style="position:absolute;right:0;bottom:10" class="text-center">
-<a href="#portfolio"><button class="btn btn-lg btn-danger" id="bt_zoom" style="" >Take a tour</button></a>
-</div>
+.facebookBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09a"; /* add facebook icon */
+}
 
-</div>
-</div>
-<div class="in_hide">
-<div id="portfolio" class="container-fluid text-center" style="padding:55">
-<span class="pa" style="font-family:times new roman;font-size:100;color:red;padding-top:10;padding:35;text-shadow:5px 5px 15px black"><i class="fa fa-code" aria-hidden="true"></i>PROJECTS<i class="fa fa-code" aria-hidden="true"></i></span>
-<div class="row" style="padding-top:35">
+.facebookBtn:hover{
+    color: #4060A5;
+    background: #fff;
+    border-color: #4060A5; /* change the border color on mouse hover */
+}
+.githubBtn{
+    background: black;
+}
+.githubBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09b"; /* add facebook icon */
+}
 
-<div class="col-md-4" style="">
-<div id="fig" style="padding:15">
-<a href="http://abhishekkarna.github.io" target="_blank">
-<video class="video"  width="416px" height="235px"> <source src="developing.mp4"type="video/mp4"></video></a>
-</div>
-</div>
-<div class="col-md-4">
-<div id="fig" style="padding:15"><a href="http://www.worldtravelling.in" target="_blank">
-<video class="video"  width="416px" height="235px"> <source src="world.mp4"type="video/mp4"></video></a></div>
-</div>
-<div class="col-md-4">
-<div id="fig" style="padding:15"><a href="http://www.savitriprabha.com" target="_blank">
-<video class="video"  width="416px" height="235px"> <source src="savitri.mp4"type="video/mp4"></video></a></div>
-</div>
-</div>
-</div>
-<hr style="margin:45">
+.githubBtn:hover{
+    color: black;
+    background: white;
+    border-color: #4060A5; /* change the border color on mouse hover */
+}
 
-<div class="container-fluid text-center" id="myskill" style="padding:60;box-sizzing:border-box">
-<span class="pa" style="font-family:times new roman;font-size:100;color:red;padding-top:10;padding:35;text-shadow:5px 5px 15px black"><i class="fa fa-code" aria-hidden="true"></i>SKILLS<i class="fa fa-code" aria-hidden="true"></i></span>
-<p class="text-center">HTML</p>
-<div class="skill_container">
-  <div class="skills html" style="transition:all 3s ease-in">90%</div>
-</div>
+/* twitter button class*/
+.twitterBtn{
+    background: #00ABE3;
+}
 
-<p class="text-center">CSS</p>
-<div class="skill_container">
-  <div class="skills css" style="transition:all 3s ease-in">80%</div>
-</div>
+.twitterBtn:before{
+      font-family: "FontAwesome";
+      content: "\f099"; /* add twitter icon */
+      
+}
 
-<p class="text-center">Bootstrap</p>
-<div class="skill_container">
-  <div class="skills bootstrap" style="transition:all 3s ease-in">80%</div>
-</div>
+.twitterBtn:hover{
+      color: #00ABE3;
+      background: #fff;
+      border-color: #00ABE3;
+}
 
-<p class="text-center">PHP</p>
-<div class="skill_container">
-  <div class="skills php" style="transition:all 3s ease-in">75%</div>
-</div>
+/* google plus button class*/
+.googleplusBtn{
+    background: #e64522;
+}
 
-<p class="text-center">MYSQL</p>
-<div class="skill_container">
-  <div class="skills mysql" style="transition:all 3s ease-in">70%</div>
-</div>
+.googleplusBtn:before{
+      font-family: "FontAwesome";
+      content: "\f0d5"; /* add googleplus icon */
+}
 
-<p class="text-center">JavaScript</p>
-<div class="skill_container">
-  <div class="skills js" style="transition:all 3s ease-in">70%</div>
-</div>
+.googleplusBtn:hover{
+      color: #e64522;
+      background: #fff;
+      border-color: #e64522;
+}
 
-<p class="text-center">JQuery</p>
-<div class="skill_container">
-  <div class="skills jquery" style="transition:all 3s ease-in">60%</div>
-</div>
-</div>
+/* linkedin button class*/
+.linkedinBtn{
+    background: #0094BC;
+}
 
-<div id="contact" class="container-fluid" style="height:100%;overflow:hidden">
-<div class="row">
-<div class="col-md-6 demo-parent text-center" style="background-color:292929;height:100%;padding:100">
-<span class="pa" id="demo" style="color:white;font-size:80;font-family:cursive"></span>
+.linkedinBtn:before{
+      font-family: "FontAwesome";
+      content: "\f0e1"; /* add linkedin icon */
+}
 
-</div>
-<div class="col-md-6 text-center" style="background-color:;height:100%">
+.linkedinBtn:hover{
+      color: #0094BC;
+      background: #fff;
+      border-color: #0094BC;
+}
+html,body
+{
+height:100%;
+width:100%;
+}
+video {
+    width: 100%;
+    box-shadow:3px 3px 3px 3px black;
+	height: auto;
+}
+.demo-parent
+{
+	transition:transform 0.5s ease-in;
+}
+.title
+{
+	font-family:open sans;
+	color:red;
+	font-style:underline;
+}
+.content
+{
+	font-family:sans serif;
+	font-size:20px;
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes move {
+  0% { margin-left:0;}
+  25% { margin-left:-280; }
+   50% { margin-left:380; }
+    100% { margin-left:0; }
+}
+.anim
+{
+	 -webkit-animation: spin 5s linear infinite, move 5s linear infinite;
+	 animation-fill-mode:forwards;
+}
+.fa-code
+{
+	font-size:75px;
+	padding-left:40px;
+	color:maroon;
+	padding-right:40px;
+}
+#hero-text
+{
+	height:400px;
+}
+.in_hide
+{
+	display:none;
+}
+@keyframes zoom
+{
+	0% {transform:scale(1,1);}
+	50% {transform:scale(1.4,1.4);}
+	100% {transform:scale(1,1);}
+}
+#bt_zoom
+{
+    animation-iteration-count: infinite;
+	animation-name:zoom;
+	animation-duration:1s;
+	animation-fill-mode:backwards;
+	font-family:gotiah;
+}
+#bt_zoom:hover
+{
+ animation-play-state: paused;
+ }
+ {box-sizing:border-box}
 
-      <span>
-	  <button id="b" class="btn btn-lg btn-primary" style="background: radial-gradient(circle at 100px 100px, #5cabff, #000); width:250px;height:250px;margin-top:124px;border-radius:100%;font-size:35px;font-family:open sans;outline:none" onClick="drop()">
-	  <span id="line">Drop me a line</span>
-	  </button>
-	  </span>
-      <div class="input-group con" style="display:none">
-        <input type="texr" class="form-control text-block" placeholder="Your name" style="border-radius:0;padding:25">
-		<input type="email" class="form-control text-block" placeholder="Email Address" style="border-radius:0;padding:25">
-		<input type="number" class="form-control text-block" placeholder="contact no." style="border-radius:0;padding:25">
-		<input type="submit" class="btn btn-primary form-control text-block" value="Reach me soon" style="border-radius:0px 0px 100% 100%;font-size:55px;font-family:cursive;height:160px;outline:none">
-		</div>
-</div>
-</div>
-</div>
-<div class="container-fluid" id="about" style="">
-<div class="row">
-<div class="col-md-6 " style="padding:50;padding-bottom:0">
-<span class="text-danger page-header" id="" style="text-shadow:1px 1px black;padding:30;font-size:50;font-family:cursive"><i class="fa fa-thumbs-down" style="font-size:70" aria-hidden="true"></i>
-What I hate
-</span>
-<br>
-<div style="padding:50;font-size:30;margin-top:27;float:right">
-<span class="title">Site Builders <i class="fa fa-wordpress" aria-hidden="true"></i></span>
-<p class="content">Never offer me wordpress etc job!</p>
-<span class="title">Rush<i style="padding-left:15" class="fa fa-ban" aria-hidden="true"></i></span>
-<p class="content">Rush kills creativity.Slow down.</p>
-<span class="title">Other's Work<i style="padding-left:15" class="fa fa-user-secret" aria-hidden="true"></i></span>
-<p class="content">Who loves to do others' work anyway?</p>
-<span class="title">Myself <i style="padding-left:15" class="fa fa-heart-o" aria-hidden="true"></i></span>
-<p class="content">Sometimes I hate myself !</p>
-</div>
-</div>
-<div class="col-md-6 text-center like" style="background-color:292929;height:100%;;padding:50">
-<span class="text-success page-header" id="" style="text-shadow:1px 1px  white;padding:30;font-size:50;font-family:cursive"><i style="font-size:70;color:white" class="fa fa-thumbs-up" aria-hidden="true"></i>
-What I Love</span>
-<br>
-<div style="padding:50;color:white;font-size:30;margin-top:27;float:left">
-<span class="title">Games <i style="" class="fa fa-gamepad" aria-hidden="true"></i></span>
-<p class="content">Who doesn't love to play either!</p>
-<span class="title">My Lappy <i style="padding-left:15" class="fa fa-laptop" aria-hidden="true"></i></span>
-<p class="content">For coding and designing.</p>
-<span class="title">Data Visualization <i style="padding-left:15" class="fa fa-bar-chart aria-hidden="true"></i></span>
-<p class="content">Without visualization , data is nothing</p>
-<span class="title">Myself <i style="padding-left:15" class="fa fa-heart" aria-hidden="true"></i></span>
-<p class="content">Sometimes I Love myself !</p>
-</div> 
-</div>
-</div>
-</div>
-<div class="container-fluid">
-<div id="social" class="footer text-center row" style="padding:25;box-sizzing:border-box;padding-bottom:5px">
-<span class="pa" style="color:white;font-size:100;font-family:Bickham Script Pro">Reach me at</span>
-<div style="padding:10px;padding-top:35">
-      <a class="facebookBtn smGlobalBtn" href="https://www.facebook.com/abhishekkarna21" target="_blank" ></a>
-			<a class="twitterBtn smGlobalBtn" href="https://twitter.com/abhishekkarna21" target="_blank"></a>
-			<a class="googleplusBtn smGlobalBtn" href="https://plus.google.com/u/0/114825886531733802622" target="_blank"></a>
-			<a class="linkedinBtn smGlobalBtn" href="https://www.linkedin.com/in/abhishek-mani-29159772/" target="_blank"></a>
-			<a class="githubBtn smGlobalBtn" href="https://www.github.com/abhishekkarna" target="_blank"></a>
-        </div>
-		
-		<div class="text-success" style="float:right;color:white;font-weight:bold">9818298969<br>abhishekmani.mani@gmail.com</div>
-</div>
-</div>
-</div>
-<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-</body>
-</html>
+.skill_container {
+    width: 100%; /* Full width */
+    background-color: #ddd; /* Grey background */
+}
+
+.skills {
+    text-align: right; /* Right-align text */
+    padding-right: 20px; /* Add some right padding */
+    line-height: 40px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
+    color: white; /* White text color */
+}
+.zero{width:0px !important;background-color:gray !important;}
+.html {width: 90%; background-color: #4CAF50;} /* Green */
+.css {width: 80%; background-color: #2196F3;} /* Blue */
+.js {width: 70%; background-color: #f44336;} /* Red */
+.php {width: 75%; background-color: #808080;}
+.jquery {width: 60%; background-color: orange;}
+.mysql {width: 70%; background-color: brown;}
+.bootstrap {width: 80%; background-color: black;}
+	p{font-weight:bold;}
