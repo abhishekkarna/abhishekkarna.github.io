@@ -1,16 +1,17 @@
+<!DOCTYPE html>
 <html>
 <head>
 <link rel="icon" href="">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="Keywords" content="Abhishek,Abhishek mani,mani,portfolio,website,my website,resume,web designer,web developer,developer,ui designer,ux designer,ui/ux,frontend,new delhi,abhishek mani website">
-<meta name="Description" content="Fresher frontend designer as well as backend PHP developer dedicated to develop elegant user interfaces. |PORTFOLIO|">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="portfolio.css">
-<script type="text/javascript" src="jquery-3.2.1.min.js"></script> 
+<meta name="Keywords" content="Abhishek,Abhishek mani,mani,portfolio,website,my website,resume,web designer,web developer,developer,ui designer,ux designer, ui/ux,frontend,new delhi,abhishek mani website">
+<meta name="Description" content="Fresher frontend designer as well as backend PHP developer dedicated to develop elegant user interfaces. |PORTFOLIO|">
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">		<!--------Bootstrap CDN-------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!----------Font Awesome CDN------------>
+<link rel="stylesheet" href="portfolio.css">															<!------------------Custom CSS--------------------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <title>
 Abhishek Mani
 </title>
@@ -18,6 +19,7 @@ Abhishek Mani
 </head>
 <body id="main">
 <script>
+<!-----------------------For The sidebar to open and close (starts)------------------------------------------->
 var flag=0;
 function openNav() 
 {
@@ -25,20 +27,21 @@ if(flag==0)
 {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
-	$('i').removeClass('fa-bars');
-	$('i').addClass('fa-times');
+	$('.bar').removeClass('fa-bars');
+	$('.bar').addClass('fa-times');
 	flag=1;
 }
 else if(flag==1)
 {
-	$('i').removeClass('fa-times');
-	$('i').addClass('fa-bars');
+	$('.bar').removeClass('fa-times');
+	$('.bar').addClass('fa-bars');
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";	
 	flag=0;
 }
 }
-
+<!-----------------------For The sidebar to open and close (ends)------------------------------------------->
+<!-----------------------For The videos to start playing (starts)------------------------------------------->
 $(document).on('mouseover', 'video', function() { 
             $(this).get(0).play(); 
         }); 
@@ -48,34 +51,48 @@ $(document).on('mouseover', 'video', function() {
             $(this).get(0).pause(); 
         });
 	
-
-</script>
-<script>
-$(document).ready(function(){
-	
+<!-----------------------For The videos to start playing (ends)------------------------------------------->
+<!-----------------------For The typeWriter effect (starts)------------------------------------------->
+$(document).ready(function()
+{	
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 1630)
 		{
 			typeWriter();
 			}
 			});
-			});
+});
+
+
 var i = 0;
 var txt = 'Let\'s Build something !'; /* The text */
 var speed = 300; /* The speed/duration of the effect in milliseconds */
 
-function typeWriter() {
+function typeWriter() 
+{
   if (i < txt.length) {
     document.getElementById("demo").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
 }		
-</script>
-<script>
+<!-----------------------For The typeWriter effect (ends)------------------------------------------->
+<!-----------------------Skil section animation (starts) ------------------------------------------->
 $(document).ready(function(){
 	
-	$(window).scroll(function(){
+	
+		});
+$(document).ready(function()
+{
+$('.html').addClass("zero");
+$('.css').addClass("zero");
+$('.bootstrap').addClass("zero");
+$('.js').addClass("zero");
+$('.jquery').addClass("zero");
+$('.php').addClass("zero");
+$('.mysql').addClass("zero");
+
+$(window).scroll(function(){
 		if ($(this).scrollTop() > 1070)
 		{
 		$('.html').removeClass("zero",5000,"easeInBack" );
@@ -87,56 +104,47 @@ $(document).ready(function(){
 		$('.mysql').removeClass("zero",5000,"easeInBack" );
 		}
 		});
-		});
-		</script>
-<script>
-$(document).ready(function()
-{
-$('.html').addClass("zero");
-$('.css').addClass("zero");
-$('.bootstrap').addClass("zero");
-$('.js').addClass("zero");
-$('.jquery').addClass("zero");
-$('.php').addClass("zero");
-$('.mysql').addClass("zero");
-
 });
-</script>
-<script>
+<!-----------------------Skil section animation (ends) ------------------------------------------->
 
+<!-----------------SCroll reveal effect starts------------------------------------------>
 $(document).ready(function()
 {
-var flag=1;
 window.sr = ScrollReveal({ reset: true });
 sr.reveal('.video', { duration: 500 });
 sr.reveal('#contact', { duration: 500 });
 sr.reveal('#about', { duration: 500 });
 sr.reveal('.like', { duration: 500 });
 sr.reveal('#myskill', { duration: 500 });
-$(window).scroll(function(){
+$(window).scroll(function()
+{
     $("#hero").css("opacity", 1 - $(window).scrollTop() / 500);
   });
 });
+<!-----------------SCroll reveal effect ends------------------------------------------>
+<!-------------------------Contact Form animation starts-------------------------->
+var check=1;
 function drop()
 {
-	if(flag==1)
+	if(check==1)
 	{
 	$('#b').animate({'margin-top':'0'},500);
 	$('#b').addClass("anim");
 	$('.con').show(500);
-	flag=0;
+	check=0;
 	}
 	else
 	{
 		$('#b').removeClass("anim");
 		$('#b').animate({'margin-top':'124px'},500);
 		$('.con').hide(500);
-	    flag=1;
+	    check=1;
 	}
-	}
-</script>
-<script type="text/javascript">
-$(document).on('click', 'a[href^="#"]', function (event) {
+}
+<!-------------------------Contact Form animation ends-------------------------->
+<!-----------------------Local scroll animation starts--------------------------------->
+$(document).on('click', 'a[href^="#"]', function (event) 
+{
     event.preventDefault();
     $('.in_hide').show();
     $('html, body').animate({
@@ -147,15 +155,26 @@ $(document).on('click', 'a[href^="#text-carousel"]', function (event) {
     event.Default();
     
 });
+<!-----------------------Local scroll animation starts--------------------------------->
+
+
+$(document).ready(function(){
+    $(".opencn").click(function(){
+        $(".cn").slideToggle(1500);
+    });
+});
 </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<div class="container-fluid">
-<span style="z-index:1100;position:fixed;top:35;left:55;background-color:black;">
-<i class="fa fa-bars" style="z-index:1000;color:white" aria-hidden="true"  onclick="openNav()"></i>
+
+<!---------------------------------This is a wrapper div-------------------------------------------->
+<div class="container-fluid">			
+<span style="z-index:1100;position:fixed;top:35px;left:55px;background-color:black;">
+<i class="bar fa fa-bars" style="z-index:1000;color:white" aria-hidden="true"  onclick="openNav()"></i>
 </span>
+<!---------------------------------Side bar(Hidden by default)------------------------------------------->
 <div id="mySidenav" class="sidenav text-center" style="font-family:cursive">
 <a href="#hero">Introduction</a>
  <a href="#about">About</a> 
@@ -164,11 +183,15 @@ $(document).on('click', 'a[href^="#text-carousel"]', function (event) {
  <a href="#contact">Contact</a>
   <a href="#social">Reach me</a>
 </div>
-<div id="hero" class="container-fluid" style="width:100%;padding:0">
-<div id="hero-text"class="col-md-6" style="margin-top:195px">
-<div class="intro" style="">
-<span style="font-size:65;font-family:Lucida sans;margin:auto"><center>Abhishek Mani</center></span><br>
 
+<!------------------------------------------------Hero image starts--------------------------------------------------------->
+<div id="hero" class="container-fluid" style="width:100%;padding:0;height:100%;margin:auto">
+<!------------------------------------------------Hero text starts--------------------------------------------------------->
+<div id="hero-text"class="col-md-6" style="margin-top:195px">				
+<div class="intro" style="">		<!--------------------------------------Additional Wrapper Class starts--------------------------------->
+<span style="font-size:65px;font-family:Lucida sans;margin:auto"><center>Abhishek Mani</center></span><br>
+
+<!-------------------------------------TEXT-CAROUSEL starts------------------------------------------------------->
 <div id="text-carousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Wrapper for slides -->
     <div class="row">
@@ -177,21 +200,21 @@ $(document).on('click', 'a[href^="#text-carousel"]', function (event) {
                 <div class="item active">
                     <div class="carousel-content">
                         <div>
-                            <p style="text-align:center"><center><span style="font-size:35;font-family:Garamond;color:grey">UI/UX Designer,Backend Developer</span></center></p>
+                            <p style="text-align:center"><center><span style="font-size:35px;font-family:Garamond;color:grey">UI/UX Designer,Backend Developer</span></center></p>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="carousel-content">
                         <div>
-                            <p><span style="font-size:35;font-family:Garamond;color:grey">I am a Freelancer UI/UX Designer from India living in New Delhi.</span></p>
+                            <p style=""><center><span style="font-size:35px;font-family:Garamond;color:grey">I am a Freelancer UI/UX Designer from India living in New Delhi.</span></p>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="carousel-content">
                         <div>                          
-                            <p><span style="font-size:35;font-family:Garamond;color:grey">A user-centered mindset and sensitivity for design turned out to be the perfect fit when collaborating with clients.</span></p>
+                            <p style=""><center><span style="font-size:35px;font-family:Garamond;color:grey">A user-centered mindset and sensitivity for design turned out to be the perfect fit when collaborating with clients.</span></p>
                         </div>
                     </div>
                 </div>
@@ -206,39 +229,54 @@ $(document).on('click', 'a[href^="#text-carousel"]', function (event) {
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
 
-</div>
-</div>
-<div style="position:absolute;right:0;bottom:10" class="text-center">
-<a href="#portfolio"><button class="btn btn-lg btn-danger" id="bt_zoom" style="" >Take a tour</button></a>
-</div>
+</div>			<!-------------------------------------TEXT-CAROUSEL ends------------------------------------------------------->
+</div>			<!------------------------------------------------Intro Class ends--------------------------------------------------------->
 
-</div>
-</div>
-<div class="in_hide">
-<div id="portfolio" class="container-fluid text-center" style="padding:55">
-<span class="pa" style="font-family:times new roman;font-size:100;color:red;padding-top:10;padding:35;text-shadow:5px 5px 15px black"><i class="fa fa-code" aria-hidden="true"></i>PROJECTS<i class="fa fa-code" aria-hidden="true"></i></span>
-<div class="row" style="padding-top:35">
+<!------------------------------------------------Take a Tour button starts--------------------------------------------------------->
+<div style="position:absolute;right:0;bottom:10px" class="text-center">
+<a href="#portfolio"><button class="btn btn-lg btn-danger" id="bt_zoom" style="" >Take a tour</button></a>
+</div>	
+<!------------------------------------------------Take a Tour button ends--------------------------------------------------------->
+
+</div>		<!------------------------------------------------Hero text ends--------------------------------------------------------->
+</div>		<!------------------------------------------------Hero image ends--------------------------------------------------------->
+
+<div class="in_hide">		<!-------------------in_hide class , enclosing everything except the hero image at the top(hidden by default)----------->
+<!---------------------------Portfolio section starts---------------------------------------------------->
+<div id="portfolio" class="container-fluid text-center" style="padding:55px">
+<span class="pa" style="font-family:times new roman;font-size:100px;color:red;padding-top:10px;padding:35px;text-shadow:5px 5px 15px black">
+<i class="fa fa-code" aria-hidden="true"></i>PROJECTS<i class="fa fa-code" aria-hidden="true"></i></span>
+<div class="row" style="padding-top:35px">
 
 <div class="col-md-4" style="">
-<div id="fig" style="padding:15">
+<div id="fig" style="padding:15px">
 <a href="http://abhishekkarna.github.io" target="_blank">
-<video class="video"  width="416px" height="235px"> <source src="developing.mp4" type="video/mp4"></video</a>
+<video class="video"  width="416px" height="235px"> <source src="developing.mp4"type="video/mp4"></video>
+</a>
 </div>
 </div>
 <div class="col-md-4">
-<div id="fig" style="padding:15"><a href="http://www.worldtravelling.in" target="_blank">
-<video class="video"  width="416px" height="235px"> <source src="world.mp4"type="video/mp4"></video></a></div>
+<div id="fig" style="padding:15px">
+<a href="http://www.worldtravelling.in" target="_blank">
+<video class="video"  width="416px" height="235px"> <source src="world.mp4"type="video/mp4"></video>
+</a>
+</div>
 </div>
 <div class="col-md-4">
-<div id="fig" style="padding:15"><a href="http://www.savitriprabha.com" target="_blank">
-<video class="video"  width="416px" height="235px"> <source src="savitri.mp4"type="video/mp4"></video></a></div>
+<div id="fig" style="padding:15px">
+<a href="http://www.savitriprabha.com" target="_blank">
+<video class="video"  width="416px" height="235px"> <source src="savitri.mp4"type="video/mp4"></video>
+</a>
 </div>
 </div>
-</div>
-<hr style="margin:45">
+</div>					<!-------------------------Row class ends-------------------------------------------------->
+</div>					<!---------------------------Portfolio section ends---------------------------------------------------->
 
-<div class="container-fluid text-center" id="myskill" style="padding:60;box-sizzing:border-box">
-<span class="pa" style="font-family:times new roman;font-size:100;color:red;padding-top:10;padding:35;text-shadow:5px 5px 15px black"><i class="fa fa-code" aria-hidden="true"></i>SKILLS<i class="fa fa-code" aria-hidden="true"></i></span>
+<hr style="margin:45px">		<!----------------------------------------Horizontal line-------------------------------->
+<!--------------------------------------------------Skills container start------------------------------------------------------->
+<div class="container-fluid text-center" id="myskill" style="padding:60px;box-sizzing:border-box">
+<span class="pa" style="font-family:times new roman;font-size:100px;color:red;padding-top:10px;padding:35px;text-shadow:5px 5px 15px black">
+<i class="fa fa-cog" aria-hidden="true"></i>SKILLS<i class="fa fa-wrench" aria-hidden="true"></i></span>
 <p class="text-center">HTML</p>
 <div class="skill_container">
   <div class="skills html" style="transition:all 3s ease-in">90%</div>
@@ -273,69 +311,80 @@ $(document).on('click', 'a[href^="#text-carousel"]', function (event) {
 <div class="skill_container">
   <div class="skills jquery" style="transition:all 3s ease-in">60%</div>
 </div>
-</div>
+</div>			<!--------------------------------------------------Skills container ends------------------------------------------------------->
 
+<!----------------------------------Contact section starts--------------------------------------------------->
 <div id="contact" class="container-fluid" style="height:100%;overflow:hidden">
 <div class="row">
-<div class="col-md-6 demo-parent text-center" style="background-color:292929;height:100%;padding:100">
-<span class="pa" id="demo" style="color:white;font-size:80;font-family:cursive"></span>
+<div class="col-md-6 demo-parent text-center" style="background-color:#292929;height:100%;padding:100px">
+<span class="pa" id="demo" style="color:white;font-size:80px;font-family:cursive"></span>
 
 </div>
 <div class="col-md-6 text-center" style="background-color:;height:100%">
 
       <span>
-	  <button id="b" class="btn btn-lg btn-primary" style="background: radial-gradient(circle at 100px 100px, #5cabff, #000); width:250px;height:250px;margin-top:124px;border-radius:100%;font-size:35px;font-family:open sans;outline:none" onClick="drop()">
+	  <button id="b" class="btn btn-lg btn-primary" style="background: radial-gradient(circle at 100px 100px, #5cabff, #000); width:250px; height:250px; margin-top:124px;border-radius:100%;font-size:35px;font-family:open sans;outline:none" onClick="drop()">
 	  <span id="line">Drop me a line</span>
 	  </button>
 	  </span>
       <div class="input-group con" style="display:none">
-        <input type="texr" class="form-control text-block" placeholder="Your name" style="border-radius:0;padding:25">
-		<input type="email" class="form-control text-block" placeholder="Email Address" style="border-radius:0;padding:25">
-		<input type="number" class="form-control text-block" placeholder="contact no." style="border-radius:0;padding:25">
-		<input type="submit" class="btn btn-primary form-control text-block" value="Reach me soon" style="border-radius:0px 0px 100% 100%;font-size:55px;font-family:cursive;height:160px;outline:none">
+        <input type="text" class="form-control text-block" placeholder="Your name" style="border-radius:0;padding:25px">
+		<input type="email" class="form-control text-block" placeholder="Email Address" style="border-radius:0;padding:25px">
+		<input type="number" class="form-control text-block" placeholder="contact no." style="border-radius:0;padding:25px">
+		<input type="submit" class="btn btn-primary form-control text-block" value="Reach me soon" style="border-radius:0px 0px 100% 100%; font-size:55px; font-family:cursive;height:160px;outline:none">
 		</div>
 </div>
-</div>
-</div>
+</div>			<!----------------------------------Row class ends------------------------------------------------------>
+</div>			<!----------------------------------Contact section ends--------------------------------------------------->
+
+<!-------------------------------------About section starts-------------------------------------------------------->
 <div class="container-fluid" id="about" style="">
 <div class="row">
-<div class="col-md-6 " style="padding:50;padding-bottom:0">
-<span class="text-danger page-header" id="" style="text-shadow:1px 1px black;padding:30;font-size:50;font-family:cursive"><i class="fa fa-thumbs-down" style="font-size:70" aria-hidden="true"></i>
+
+<!--------------------What i hate column starts------------------------------------------------------------->
+<div class="col-md-6 " style="padding:50px;padding-bottom:0px">
+<span class="text-danger page-header" id="" style="text-shadow:1px 1px black;padding:30px;font-size:50px;font-family:cursive"><i class="fa fa-thumbs-down" style="font-size:70px" aria-hidden="true"></i>
 What I hate
 </span>
 <br>
-<div style="padding:50;font-size:30;margin-top:27;float:right">
+<div style="padding:50px;font-size:30px;margin-top:27px;float:right">
 <span class="title">Site Builders <i class="fa fa-wordpress" aria-hidden="true"></i></span>
 <p class="content">Never offer me wordpress etc job!</p>
-<span class="title">Rush<i style="padding-left:15" class="fa fa-ban" aria-hidden="true"></i></span>
+<span class="title">Rush<i style="padding-left:15px" class="fa fa-ban" aria-hidden="true"></i></span>
 <p class="content">Rush kills creativity.Slow down.</p>
-<span class="title">Other's Work<i style="padding-left:15" class="fa fa-user-secret" aria-hidden="true"></i></span>
+<span class="title">Other's Work<i style="padding-left:15px" class="fa fa-user-secret" aria-hidden="true"></i></span>
 <p class="content">Who loves to do others' work anyway?</p>
-<span class="title">Myself <i style="padding-left:15" class="fa fa-heart-o" aria-hidden="true"></i></span>
+<span class="title">Myself <i style="padding-left:15px" class="fa fa-heart-o" aria-hidden="true"></i></span>
 <p class="content">Sometimes I hate myself !</p>
 </div>
-</div>
-<div class="col-md-6 text-center like" style="background-color:292929;height:100%;;padding:50">
-<span class="text-success page-header" id="" style="text-shadow:1px 1px  white;padding:30;font-size:50;font-family:cursive"><i style="font-size:70;color:white" class="fa fa-thumbs-up" aria-hidden="true"></i>
+</div>	<!--------------------What i hate column starts------------------------------------------------------------->
+
+<!--------------------What i love column starts------------------------------------------------------------->
+<div class="col-md-6 text-center like" style="background-color:#292929;height:100%;;padding:50px">
+<span class="text-success page-header" id="" style="text-shadow:1px 1px  white;padding:30px;font-size:50px;font-family:cursive"><i style="font-size:70px; color:white" class="fa fa-thumbs-up" aria-hidden="true"></i>
 What I Love</span>
 <br>
-<div style="padding:50;color:white;font-size:30;margin-top:27;float:left">
+<div style="padding:50px;color:white;font-size:30px;margin-top:27px;float:left">
 <span class="title">Games <i style="" class="fa fa-gamepad" aria-hidden="true"></i></span>
 <p class="content">Who doesn't love to play either!</p>
-<span class="title">My Lappy <i style="padding-left:15" class="fa fa-laptop" aria-hidden="true"></i></span>
+<span class="title">My Lappy <i style="padding-left:15px" class="fa fa-laptop" aria-hidden="true"></i></span>
 <p class="content">For coding and designing.</p>
-<span class="title">Data Visualization <i style="padding-left:15" class="fa fa-bar-chart aria-hidden="true"></i></span>
+<span class="title">Data Visualization <i style="padding-left:15px" class="fa fa-bar-chart aria-hidden="true"></i></span>
 <p class="content">Without visualization , data is nothing</p>
-<span class="title">Myself <i style="padding-left:15" class="fa fa-heart" aria-hidden="true"></i></span>
+<span class="title">Myself <i style="padding-left:15px" class="fa fa-heart" aria-hidden="true"></i></span>
 <p class="content">Sometimes I Love myself !</p>
 </div> 
-</div>
-</div>
-</div>
-<div class="container-fluid">
-<div id="social" class="footer text-center row" style="padding:25;box-sizzing:border-box;padding-bottom:5px">
-<span class="pa" style="color:white;font-size:100;font-family:Bickham Script Pro">Reach me at</span>
-<div style="padding:10px;padding-top:35">
+</div>	<!--------------------What i love column ends------------------------------------------------------------->
+</div>	<!-----------------------------------Container for row ends----------------------------------------------------->
+</div>	<!------------------------------------container about ID ends------------------------------------------------->
+
+<div class="container-fluid">  <!-------------------------------Container for footer starts---------------------------------------->
+
+<div id="social" class="footer text-center row" style="padding:25px;box-sizzing:border-box;padding-bottom:5px">	<!-------Footer starts------------------->
+<span class="pa" style="color:white;font-size:100px;font-family:Bickham Script Pro">Also reach me at</span>
+<div style="padding:10px;padding-top:35px">
+
+
       <a class="facebookBtn smGlobalBtn" href="https://www.facebook.com/abhishekkarna21" target="_blank" ></a>
 			<a class="twitterBtn smGlobalBtn" href="https://twitter.com/abhishekkarna21" target="_blank"></a>
 			<a class="googleplusBtn smGlobalBtn" href="https://plus.google.com/u/0/114825886531733802622" target="_blank"></a>
@@ -343,11 +392,11 @@ What I Love</span>
 			<a class="githubBtn smGlobalBtn" href="https://www.github.com/abhishekkarna" target="_blank"></a>
         </div>
 		
-		<div class="text-success" style="float:right;color:white;font-weight:bold">9818298969<br>abhishekmani.mani@gmail.com</div>
-</div>
-</div>
-</div>
-</div>
+		<div class="text-success" style="float:right;color:white;font-weight:bold">+91-9818298969<br>abhishekmani.mani@gmail.com</div>
+</div>		<!----------------------Footer ends---------------------------------------->
+</div>		<!---------------------Container for footer ends---------------------------------------->
+</div>		<!-----------------------in_hide class ends------------------------------------->
+</div>		<!------------------------Wrapper class ends------------------------------------>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 </body>
 </html>
